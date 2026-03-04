@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms &amp; Conditions — ScarabCrafts</title>
+  <meta name="description" content="Terms and Conditions for ScarabCrafts and its products."/>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:      #00ff41;
+      --green-dim:  #00cc33;
+      --green-glow: rgba(0, 255, 65, 0.15);
+      --bg:         #080808;
+      --surface:    #0e0e0e;
+      --border:     rgba(0, 255, 65, 0.18);
+      --text:       #e0e0e0;
+      --muted:      #666;
+      --mono:       'Share Tech Mono', monospace;
+      --sans:       'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    #matrix {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+      opacity: 0.13;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      background: rgba(8, 8, 8, 0.85);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .nav-logo-text {
+      font-family: var(--mono);
+      font-size: 1rem;
+      color: var(--green);
+      letter-spacing: 0.08em;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--green); }
+
+    .legal {
+      padding: 120px 0 96px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .legal h1 {
+      font-family: var(--mono);
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      color: var(--green);
+      margin-bottom: 8px;
+      text-shadow: 0 0 30px rgba(0,255,65,0.4);
+    }
+
+    .legal .effective {
+      color: var(--muted);
+      font-size: 0.875rem;
+      margin-bottom: 48px;
+    }
+
+    .legal h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #fff;
+      margin: 36px 0 12px;
+    }
+
+    .legal p, .legal li {
+      color: var(--text);
+      font-size: 0.9375rem;
+      margin-bottom: 12px;
+    }
+
+    .legal ul {
+      padding-left: 24px;
+      margin-bottom: 12px;
+    }
+
+    .legal a {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .legal a:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .footer-brand img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    .footer-brand-name {
+      font-family: var(--mono);
+      font-size: 0.875rem;
+      color: var(--green);
+    }
+
+    .footer-copy {
+      color: var(--muted);
+      font-size: 0.8125rem;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.8125rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--green); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="matrix"></canvas>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="ScarabCrafts logo"/>
+        <span class="nav-logo-text">ScarabCrafts</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="legal">
+    <div class="container">
+      <h1>Terms &amp; Conditions</h1>
+      <p class="effective">Effective date: March 3, 2026</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>By accessing or using any website, application, or service operated by ScarabCrafts ("we", "us", "our"), including the Bond application, you agree to be bound by these Terms &amp; Conditions. If you do not agree, do not use our services.</p>
+
+      <h2>2. Services</h2>
+      <p>ScarabCrafts develops and operates software products, including Bond, a daily habit app for couples. Our services may change, and we reserve the right to modify, suspend, or discontinue any part of them at any time.</p>
+
+      <h2>3. User Conduct</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use our services for any unlawful purpose</li>
+        <li>Attempt to gain unauthorized access to our systems</li>
+        <li>Interfere with or disrupt the operation of our services</li>
+        <li>Reproduce, distribute, or create derivative works from our content without permission</li>
+      </ul>
+
+      <h2>4. Intellectual Property</h2>
+      <p>All content, trademarks, logos, and software associated with ScarabCrafts and its products are owned by ScarabCrafts. You may not use them without our prior written consent.</p>
+
+      <h2>5. Disclaimer of Warranties</h2>
+      <p>Our services are provided "as is" and "as available" without warranties of any kind, express or implied. We do not guarantee that our services will be uninterrupted, error-free, or secure.</p>
+
+      <h2>6. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, ScarabCrafts shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.</p>
+
+      <h2>7. Changes to These Terms</h2>
+      <p>We may update these Terms at any time. Continued use of our services after changes are posted constitutes your acceptance of the revised Terms.</p>
+
+      <h2>8. Governing Law</h2>
+      <p>These Terms are governed by and construed in accordance with the laws of the Province of Nova Scotia, Canada.</p>
+
+      <h2>9. Contact</h2>
+      <p>If you have questions about these Terms, contact us at <a href="mailto:bondapp@scarabcrafts.com">bondapp@scarabcrafts.com</a>.</p>
+      <p>ScarabCrafts<br/>Apt 602, 155 Wentworth Drive<br/>Halifax, Nova Scotia, Canada</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="footer-brand">
+          <img src="logo.png" alt="ScarabCrafts"/>
+          <span class="footer-brand-name">ScarabCrafts</span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+      <p class="footer-copy">&copy; 2026 ScarabCrafts. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById('matrix');
+    const ctx    = canvas.getContext('2d');
+    function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    resize();
+    window.addEventListener('resize', resize);
+    const chars  = 'アイウエオカキクケコサシスセソタチツテトナニヌネノABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>{}[]|/\\';
+    const size   = 14;
+    let columns  = Math.floor(canvas.width / size);
+    let drops    = Array(columns).fill(1);
+    function draw() {
+      ctx.fillStyle = 'rgba(8, 8, 8, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#00ff41';
+      ctx.font      = size + 'px Share Tech Mono, monospace';
+      for (let i = 0; i < drops.length; i++) {
+        const char = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(char, i * size, drops[i] * size);
+        if (drops[i] * size > canvas.height && Math.random() > 0.975) drops[i] = 0;
+        drops[i]++;
+      }
+    }
+    setInterval(draw, 40);
+    window.addEventListener('resize', () => { resize(); columns = Math.floor(canvas.width / size); drops = Array(columns).fill(1); });
+  </script>
+</body>
+</html>
