@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "wrangler.jsonc",
+      "company-info.md",
+      "CLAUDE.md",
+      "scarabcrafts.jpg",
+      "node_modules"
+    ]
+  }
+}

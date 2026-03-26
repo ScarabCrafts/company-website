@@ -1,3 +1,10 @@
+# firebase cache
+.firebase/
+
+# sensitive files
+scarabclaw-github-recovery-codes.txt
+delicates/
+
 # wrangler files
 .wrangler
 .dev.vars*
