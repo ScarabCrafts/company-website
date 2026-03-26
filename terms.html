@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Terms &amp; Conditions — ScarabCrafts</title>
-  <meta name="description" content="Terms and Conditions for ScarabCrafts and its products."/>
+  <title>Terms of Service — ScarabCrafts</title>
+  <meta name="description" content="Terms of Service for ScarabCrafts and its products."/>
   <link rel="icon" type="image/png" href="logo.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --green:      #00ff41;
       --green-dim:  #00cc33;
@@ -23,197 +22,40 @@
       --mono:       'Share Tech Mono', monospace;
       --sans:       'Inter', sans-serif;
     }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      font-weight: 300;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    #matrix {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: 0;
-      opacity: 0.13;
-      pointer-events: none;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--border);
-      background: rgba(8, 8, 8, 0.85);
-      backdrop-filter: blur(12px);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .nav-logo img {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-    }
-
-    .nav-logo-text {
-      font-family: var(--mono);
-      font-size: 1rem;
-      color: var(--green);
-      letter-spacing: 0.08em;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 28px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 0.875rem;
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
-    }
-
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+    #matrix { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.13; pointer-events: none; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; border-bottom: 1px solid var(--border); background: rgba(8,8,8,0.85); backdrop-filter: blur(12px); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { width: 32px; height: 32px; object-fit: contain; }
+    .nav-logo-text { font-family: var(--mono); font-size: 1rem; color: var(--green); letter-spacing: 0.08em; }
+    .nav-links { list-style: none; display: flex; gap: 28px; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.875rem; letter-spacing: 0.04em; transition: color 0.2s; }
     .nav-links a:hover { color: var(--green); }
-
-    .legal {
-      padding: 120px 0 96px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .legal h1 {
-      font-family: var(--mono);
-      font-size: clamp(1.5rem, 4vw, 2.25rem);
-      color: var(--green);
-      margin-bottom: 8px;
-      text-shadow: 0 0 30px rgba(0,255,65,0.4);
-    }
-
-    .legal .effective {
-      color: var(--muted);
-      font-size: 0.875rem;
-      margin-bottom: 48px;
-    }
-
-    .legal h2 {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: #fff;
-      margin: 36px 0 12px;
-    }
-
-    .legal p, .legal li {
-      color: var(--text);
-      font-size: 0.9375rem;
-      margin-bottom: 12px;
-    }
-
-    .legal ul {
-      padding-left: 24px;
-      margin-bottom: 12px;
-    }
-
-    .legal a {
-      color: var(--green);
-      text-decoration: none;
-    }
-
+    .legal { padding: 120px 0 96px; position: relative; z-index: 1; }
+    .legal h1 { font-family: var(--mono); font-size: clamp(1.5rem, 4vw, 2.25rem); color: var(--green); margin-bottom: 8px; text-shadow: 0 0 30px rgba(0,255,65,0.4); }
+    .legal .effective { color: var(--muted); font-size: 0.875rem; margin-bottom: 48px; }
+    .legal h2 { font-size: 1.125rem; font-weight: 600; color: #fff; margin: 36px 0 12px; }
+    .legal p, .legal li { color: var(--text); font-size: 0.9375rem; margin-bottom: 12px; }
+    .legal ul { padding-left: 24px; margin-bottom: 12px; }
+    .legal a { color: var(--green); text-decoration: none; }
     .legal a:hover { text-decoration: underline; }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .footer-brand img {
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
-    }
-
-    .footer-brand-name {
-      font-family: var(--mono);
-      font-size: 0.875rem;
-      color: var(--green);
-    }
-
-    .footer-copy {
-      color: var(--muted);
-      font-size: 0.8125rem;
-      text-align: center;
-      margin-top: 16px;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.8125rem;
-      transition: color 0.2s;
-    }
-
+    footer { border-top: 1px solid var(--border); padding: 32px 0; position: relative; z-index: 1; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .footer-brand img { width: 24px; height: 24px; object-fit: contain; }
+    .footer-brand-name { font-family: var(--mono); font-size: 0.875rem; color: var(--green); }
+    .footer-copy { color: var(--muted); font-size: 0.8125rem; text-align: center; margin-top: 16px; }
+    .footer-links { list-style: none; display: flex; gap: 20px; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.8125rem; transition: color 0.2s; }
     .footer-links a:hover { color: var(--green); }
-
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-    }
+    @media (max-width: 600px) { .nav-links { display: none; } }
   </style>
 </head>
 <body>
-
   <canvas id="matrix"></canvas>
-
   <nav>
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
@@ -229,42 +71,72 @@
 
   <section class="legal">
     <div class="container">
-      <h1>Terms &amp; Conditions</h1>
-      <p class="effective">Effective date: March 3, 2026</p>
+      <h1>Terms of Service</h1>
+      <p class="effective">Effective date: March 2026</p>
 
-      <h2>1. Acceptance of Terms</h2>
-      <p>By accessing or using any website, application, or service operated by ScarabCrafts ("we", "us", "our"), including the Bond application, you agree to be bound by these Terms &amp; Conditions. If you do not agree, do not use our services.</p>
+      <h2>1. Agreement</h2>
+      <p>These Terms of Service ("Terms") are a legally binding agreement between you and ScarabCrafts ("we", "us", "our"). By accessing or using any website, application, product, or service we operate (collectively, "Services"), you agree to these Terms in full. If you do not agree, you must stop using our Services immediately.</p>
 
       <h2>2. Services</h2>
-      <p>ScarabCrafts develops and operates software products, including Bond, a daily habit app for couples. Our services may change, and we reserve the right to modify, suspend, or discontinue any part of them at any time.</p>
+      <p>ScarabCrafts creates, operates, and distributes products and services across various categories, including but not limited to applications, websites, digital content, and related offerings. We reserve the right to modify, suspend, or discontinue any Service — or any feature within a Service — at any time, with or without notice, for any reason. We are not liable to you or any third party for any modification, suspension, or discontinuation of a Service.</p>
 
-      <h2>3. User Conduct</h2>
+      <h2>3. Eligibility</h2>
+      <p>You must be at least 13 years of age to use our Services. If you are under the age of majority in your jurisdiction, you represent that your parent or legal guardian has reviewed and agreed to these Terms on your behalf. By using our Services, you represent and warrant that you meet these requirements.</p>
+
+      <h2>4. Accounts</h2>
+      <p>Some Services require you to create an account. You are solely responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account, whether or not authorized by you. You agree to notify us immediately at <a href="mailto:legal@scarabcrafts.com">legal@scarabcrafts.com</a> if you become aware of any unauthorized use of your account. We reserve the right to suspend or terminate any account at our sole discretion.</p>
+
+      <h2>5. User Conduct</h2>
       <p>You agree not to:</p>
       <ul>
-        <li>Use our services for any unlawful purpose</li>
-        <li>Attempt to gain unauthorized access to our systems</li>
-        <li>Interfere with or disrupt the operation of our services</li>
-        <li>Reproduce, distribute, or create derivative works from our content without permission</li>
+        <li>Use our Services for any unlawful, fraudulent, or harmful purpose</li>
+        <li>Attempt to gain unauthorized access to our systems, networks, or other users' accounts</li>
+        <li>Interfere with, disrupt, or place an undue burden on the operation of our Services or infrastructure</li>
+        <li>Reproduce, distribute, publicly display, modify, or create derivative works from our content, code, or materials without prior written permission</li>
+        <li>Reverse engineer, decompile, disassemble, or otherwise attempt to extract source code from any of our products or services</li>
+        <li>Use automated means (bots, scrapers, crawlers) to access or collect data from our Services without written consent</li>
+        <li>Impersonate any person or entity, or misrepresent your affiliation with any person or entity</li>
       </ul>
 
-      <h2>4. Intellectual Property</h2>
-      <p>All content, trademarks, logos, and software associated with ScarabCrafts and its products are owned by ScarabCrafts. You may not use them without our prior written consent.</p>
+      <h2>6. Subscriptions and Payments</h2>
+      <p>Certain Services or features may be offered on a paid or subscription basis. By purchasing a subscription, you agree to the pricing, payment terms, and billing cycle disclosed at the time of purchase. Subscriptions renew automatically unless cancelled before the end of the current billing period. Cancellation is your responsibility and must be done through the platform on which you subscribed (e.g. Apple App Store, Google Play). We do not issue refunds except where required by applicable law or platform policy.</p>
 
-      <h2>5. Disclaimer of Warranties</h2>
-      <p>Our services are provided "as is" and "as available" without warranties of any kind, express or implied. We do not guarantee that our services will be uninterrupted, error-free, or secure.</p>
+      <h2>7. Intellectual Property</h2>
+      <p>All content, trademarks, trade names, logos, designs, code, and other materials associated with ScarabCrafts and its Services are the exclusive property of ScarabCrafts or its licensors and are protected by applicable intellectual property laws. Nothing in these Terms grants you any right, title, or interest in our intellectual property except the limited right to use our Services as expressly permitted herein. Any unauthorized use may result in termination of your access and may subject you to civil and criminal penalties.</p>
 
-      <h2>6. Limitation of Liability</h2>
-      <p>To the fullest extent permitted by law, ScarabCrafts shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.</p>
+      <h2>8. User Content</h2>
+      <p>If any of our Services allow you to submit, upload, or transmit content ("User Content"), you retain ownership of your User Content. However, by submitting User Content, you grant ScarabCrafts a worldwide, non-exclusive, royalty-free, sublicensable license to use, reproduce, modify, and display your User Content solely for the purpose of operating and improving our Services. You represent that you own or have the necessary rights to submit your User Content and that it does not violate any third party's rights.</p>
 
-      <h2>7. Changes to These Terms</h2>
-      <p>We may update these Terms at any time. Continued use of our services after changes are posted constitutes your acceptance of the revised Terms.</p>
+      <h2>9. Third-Party Services</h2>
+      <p>Our Services may integrate with or link to third-party platforms, tools, or services. We do not control and are not responsible for the content, privacy practices, or availability of any third-party services. Your use of third-party services is governed by their respective terms and policies. We are not liable for any loss or damage arising from your use of third-party services.</p>
 
-      <h2>8. Governing Law</h2>
-      <p>These Terms are governed by and construed in accordance with the laws of the Province of Nova Scotia, Canada.</p>
+      <h2>10. Disclaimer of Warranties</h2>
+      <p>OUR SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT OUR SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE, NOR DO WE WARRANT THE ACCURACY OR RELIABILITY OF ANY CONTENT OBTAINED THROUGH OUR SERVICES.</p>
 
-      <h2>9. Contact</h2>
-      <p>If you have questions about these Terms, contact us at <a href="mailto:bondapp@scarabcrafts.com">bondapp@scarabcrafts.com</a>.</p>
-      <p>ScarabCrafts<br/>Apt 602, 155 Wentworth Drive<br/>Halifax, Nova Scotia, Canada</p>
+      <h2>11. Limitation of Liability</h2>
+      <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL SCARABCRAFTS, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF OR INABILITY TO USE OUR SERVICES, REGARDLESS OF THE THEORY OF LIABILITY (CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR OTHERWISE), EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+      <p>OUR TOTAL AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATED TO THESE TERMS OR OUR SERVICES SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNTS YOU HAVE PAID TO US IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR (B) ONE HUNDRED CANADIAN DOLLARS (CAD $100).</p>
+
+      <h2>12. Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless ScarabCrafts and its officers, directors, employees, agents, and affiliates from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or in connection with: (a) your use of our Services; (b) your violation of these Terms; (c) your violation of any third party's rights; or (d) your User Content.</p>
+
+      <h2>13. Termination</h2>
+      <p>We may suspend or terminate your access to any or all of our Services at any time, with or without cause, with or without notice, at our sole discretion. You may stop using our Services at any time. Upon termination, all rights and licenses granted to you under these Terms will immediately cease. Sections that by their nature should survive termination (including but not limited to Intellectual Property, Disclaimer of Warranties, Limitation of Liability, Indemnification, and Governing Law) shall survive.</p>
+
+      <h2>14. Severability</h2>
+      <p>If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make it valid and enforceable, or if modification is not possible, severed from these Terms. The remaining provisions shall continue in full force and effect.</p>
+
+      <h2>15. Entire Agreement</h2>
+      <p>These Terms, together with our <a href="privacy.html">Privacy Policy</a> and any additional terms applicable to specific Services, constitute the entire agreement between you and ScarabCrafts regarding the use of our Services. These Terms supersede any prior agreements or understandings, whether written or oral.</p>
+
+      <h2>16. Changes to These Terms</h2>
+      <p>We reserve the right to update or modify these Terms at any time. If we make material changes, we will update the effective date at the top of this page. Your continued use of our Services after any changes are posted constitutes your acceptance of the revised Terms. It is your responsibility to review these Terms periodically.</p>
+
+      <h2>17. Governing Law and Jurisdiction</h2>
+      <p>These Terms are governed by and construed in accordance with the laws of the Province of Nova Scotia, Canada, without regard to its conflict of law principles. Any dispute arising out of or relating to these Terms or our Services shall be subject to the exclusive jurisdiction of the courts located in Halifax, Nova Scotia, Canada, and you consent to the personal jurisdiction of such courts.</p>
+
+      <h2>18. Contact</h2>
+      <p>If you have questions about these Terms, contact us at <a href="mailto:legal@scarabcrafts.com">legal@scarabcrafts.com</a>.</p>
     </div>
   </section>
 
@@ -291,10 +163,10 @@
     function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
     resize();
     window.addEventListener('resize', resize);
-    const chars  = 'アイウエオカキクケコサシスセソタチツテトナニヌネノABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>{}[]|/\\';
-    const size   = 14;
-    let columns  = Math.floor(canvas.width / size);
-    let drops    = Array(columns).fill(1);
+    const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>{}[]|/\\';
+    const size  = 14;
+    let columns = Math.floor(canvas.width / size);
+    let drops   = Array(columns).fill(1);
     function draw() {
       ctx.fillStyle = 'rgba(8, 8, 8, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
